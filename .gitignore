@@ -1,0 +1,13 @@
+.gradle
+.settings
+.checkstyle
+.classpath
+.project
+.idea
+*.ipr
+*.iml
+*.iws
+.DS_Store
+bin
+build
+*.hprof
