@@ -16,6 +16,7 @@ import com.cthing.gradle.plugins.test.GradleTestProjectExtension;
 public class JasyptPluginTest {
 
     @RegisterExtension
+    @SuppressWarnings("unused")
     public final GradleTestProjectExtension extension = new GradleTestProjectExtension("project", "com.cthing.jasypt");
 
     private Project project;

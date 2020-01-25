@@ -20,6 +20,7 @@ import static com.cthing.gradle.plugins.test.PluginTestUtils.runBuild;
 public class EncryptorTest {
 
     @RegisterExtension
+    @SuppressWarnings("unused")
     public final GradleTestProjectExtension extension = new GradleTestProjectExtension("project");
 
     private Project project;
