@@ -18,7 +18,7 @@ apply {
 
 configure<ProjectInfoExtension> {
     description = "Plugin for encrypting and decrypting values using Jasypt."
-    projectUrl = "https://bitbucket.org/cthing/gradle-jasypt-plugin/"
+    projectUrl = "https://github.com/baron1405/gradle-jasypt-plugin/"
 }
 
 configure<GradlePluginDevelopmentExtension> {
