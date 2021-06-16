@@ -32,8 +32,8 @@ dependencies {
     implementation("com.cthing:gradle-core-plugins:0.1.0-+")
     implementation("com.cthing:cthing-jasypt:0.1.0-+")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
     testImplementation("org.assertj:assertj-core:3.19.0")
 
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }
