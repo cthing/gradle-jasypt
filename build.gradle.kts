@@ -33,7 +33,7 @@ dependencies {
     implementation("com.cthing:cthing-jasypt:0.1.0-+")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
-    testImplementation("org.assertj:assertj-core:3.19.0")
+    testImplementation("org.assertj:assertj-core:3.20.2")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }
