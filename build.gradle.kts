@@ -1,28 +1,16 @@
-import com.cthing.gradle.plugins.core.ProjectInfoExtension
-
 plugins {
     java
+    id("com.cthing.gradle-plugin-project") version("0.1.0-+")
+    id("com.cthing.dependency-analysis") version("0.1.0-+")
 }
 
-buildscript {
-    dependencies {
-        classpath("com.cthing:gradle-core-plugins:0.1.0-+")
-        classpath("com.cthing:gradle-dependency-analysis-plugin:0.1.0-+")
-    }
-}
-
-apply {
-    plugin("com.cthing.gradle-plugin-project")
-    plugin("com.cthing.dependency-analysis")
-}
-
-configure<ProjectInfoExtension> {
+projectInfo {
     description.set("Plugin for encrypting and decrypting values using Jasypt.")
     projectUrl.set("https://github.com/baron1405/gradle-jasypt-plugin/")
 }
 
-configure<GradlePluginDevelopmentExtension> {
-    plugins.register("jasyptPlugin") {
+gradlePlugin {
+    plugins.create("jasyptPlugin") {
         id = "com.cthing.jasypt"
         implementationClass = "com.cthing.gradle.plugins.jasypt.JasyptPlugin"
     }
