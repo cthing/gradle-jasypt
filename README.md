@@ -1,4 +1,4 @@
-# ![C Thing Software](http://www.cthing.com/images/Logo.gif "C Thing Software") gradle-jasypt-plugin
+# ![C Thing Software](https://www.cthing.com/branding/CThingSoftware-57x60.png "C Thing Software") gradle-jasypt-plugin
 Plugin for encrypting and decrypting values using Jasypt.
 ### License
-[C Thing Software Internal Use Only](http://www.cthing.com/licenses/internal.txt)
+[C Thing Software Internal Use Only](https://www.cthing.com/licenses/internal.txt)
