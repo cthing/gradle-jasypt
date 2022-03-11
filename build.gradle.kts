@@ -9,7 +9,7 @@ plugins {
 
 projectInfo {
     description.set("Plugin for encrypting and decrypting values using Jasypt.")
-    projectUrl.set("https://github.com/baron1405/gradle-jasypt-plugin/")
+    projectUrl.set("https://github.com/cthing/gradle-jasypt-plugin/")
 }
 
 gradlePlugin {
