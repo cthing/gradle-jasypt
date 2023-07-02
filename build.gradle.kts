@@ -7,8 +7,8 @@ plugins {
 }
 
 projectInfo {
-    description.set("Plugin for encrypting and decrypting values using Jasypt.")
-    projectUrl.set("https://github.com/cthing/gradle-jasypt/")
+    description = "Plugin for encrypting and decrypting values using Jasypt."
+    projectUrl = "https://github.com/cthing/gradle-jasypt/"
 }
 
 gradlePlugin {
@@ -26,4 +26,5 @@ dependencies {
     testImplementation(libs.assertJ)
 
     testRuntimeOnly(libs.junitEngine)
+    testRuntimeOnly(libs.junitLauncher)
 }
