@@ -15,6 +15,7 @@ public class EncryptStringTask extends AbstractStringEncryptorTask {
 
     static final String TASK_NAME = "encryptString";
 
+    @SuppressWarnings("this-escape")
     public EncryptStringTask() {
         setDescription("Encrypts a string using Jasypt");
     }
@@ -29,6 +30,6 @@ public class EncryptStringTask extends AbstractStringEncryptorTask {
         }
 
         final String encrypted = getEncryptor().encrypt(this.string);
-        System.out.println(String.format("%nEncrypted string: %s%n", encrypted));
+        System.out.printf("%nEncrypted string: %s%n%n", encrypted);
     }
 }

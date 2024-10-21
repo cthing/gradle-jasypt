@@ -23,6 +23,7 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
     private String password;
     private StringEncryptor encryptor;
 
+    @SuppressWarnings("this-escape")
     protected AbstractStringEncryptorTask() {
         setGroup("Encryption");
     }
