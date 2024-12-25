@@ -8,7 +8,7 @@ import org.gradle.api.Project;
 import org.gradle.testfixtures.ProjectBuilder;
 import org.junit.jupiter.api.Test;
 
-import com.cthing.gradle.plugins.test.GradleProjectAssert;
+import static org.cthing.assertj.gradle.GradleProjectAssert.assertThat;
 
 
 public class JasyptPluginTest {
@@ -18,7 +18,6 @@ public class JasyptPluginTest {
         final Project project = ProjectBuilder.builder().build();
         project.getPluginManager().apply("com.cthing.jasypt");
 
-        GradleProjectAssert.assertThat(project).hasTask("encryptString");
-        GradleProjectAssert.assertThat(project).hasTask("decryptString");
+        assertThat(project).hasTask("encryptString", "decryptString");
     }
 }

@@ -26,8 +26,8 @@ dependencies {
     implementation(libs.corePlugins)
     implementation(libs.cthingJasypt)
 
+    testImplementation(libs.assertJGradle)
     testImplementation(libs.junitApi)
-    testImplementation(libs.assertJ)
 
     testRuntimeOnly(libs.junitEngine)
     testRuntimeOnly(libs.junitLauncher)
