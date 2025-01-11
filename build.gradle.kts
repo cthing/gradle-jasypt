@@ -9,9 +9,10 @@ plugins {
 }
 
 version = ProjectVersion("0.3.0", BuildType.snapshot)
+group = "com.cthing"
+description = "Plugin for encrypting and decrypting values using Jasypt."
 
 projectInfo {
-    description = "Plugin for encrypting and decrypting values using Jasypt."
     projectUrl = "https://github.com/cthing/gradle-jasypt/"
 }
 

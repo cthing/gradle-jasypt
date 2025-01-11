@@ -9,6 +9,7 @@ plugins {
 }
 
 version = ProjectVersion("0.1.0", BuildType.snapshot)
+group = "com.cthing"
 
 tasks {
     "encryptString"(EncryptStringTask::class) {
