@@ -12,10 +12,6 @@ version = ProjectVersion("0.3.0", BuildType.snapshot)
 group = "com.cthing"
 description = "Plugin for encrypting and decrypting values using Jasypt."
 
-projectInfo {
-    projectUrl = "https://github.com/cthing/gradle-jasypt/"
-}
-
 gradlePlugin {
     plugins.create("jasyptPlugin") {
         id = "com.cthing.jasypt"
