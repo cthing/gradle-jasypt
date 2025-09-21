@@ -8,7 +8,7 @@ pluginProject = { id = "com.cthing.gradle-plugin-project", version.ref = "cthing
 [libraries]
 assertJGradle = "org.cthing:assertj-gradle:3.0.0"
 corePlugins = { module = "com.cthing:gradle-core", version.ref = "cthingCore" }
-cthingJasypt = "com.cthing:cthing-jasypt:0.2.0-+"
+cthingJasypt = "org.cthing:cthing-jasypt:1.0.0"
 junitApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
 junitEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 junitLauncher = "org.junit.platform:junit-platform-launcher:1.13.2"

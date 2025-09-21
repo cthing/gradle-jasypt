@@ -4,13 +4,12 @@
  */
 package com.cthing.gradle.plugins.jasypt;
 
+import org.cthing.jasypt.CthingStringEncryptor;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.GradleException;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.options.Option;
 import org.jasypt.encryption.StringEncryptor;
-
-import com.cthing.jasypt.CthingStringEncryptor;
 
 
 /**
