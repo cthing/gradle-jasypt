@@ -32,7 +32,7 @@
 
     <!-- File must start with the C Thing copyright header -->
     <module name="RegexpHeader">
-        <property name="header" value="^/\*$\n^ \* Copyright [\d]{4}((,[\s]*[\d]{4})*|(-[\d]{4})?) C Thing Software$\n^ \* All rights reserved.$\n^ \*/$"/>
+        <property name="headerFile" value="${config_loc}/header.txt"/>
     </module>
 
     <!-- Ensure @return has a description -->
@@ -256,9 +256,6 @@
         <!-- Local variables must be camel case starting with a lowercase letter -->
         <module name="LocalVariableName"/>
 
-        <!-- Ensure logger declarations have the correct format -->
-        <module name="LogDeclaration"/>
-
         <!-- Numbers other than -1, 0, 1, and 2 must be defined as a constant except in hashCode methods and annotations -->
         <module name="MagicNumber">
             <property name="ignoreHashCodeMethod" value="true"/>
@@ -406,9 +403,6 @@
 
         <!-- Allow suppression of Checkstyle issues using trailing SUPPRESS CHECKSTYLE comment -->
         <module name="SuppressWithNearbyCommentFilter"/>
-
-        <!-- Ensure test methods have the correct declaration -->
-        <module name="TestMethodDeclaration"/>
 
         <!-- Detects "TODO:" as an information message -->
         <module name="TodoComment">

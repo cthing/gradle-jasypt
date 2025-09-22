@@ -1,15 +1,10 @@
-import com.cthing.gradle.plugins.jasypt.EncryptStringTask
-import com.cthing.gradle.plugins.jasypt.DecryptStringTask
-import org.cthing.projectversion.BuildType
-import org.cthing.projectversion.ProjectVersion
+import org.cthing.gradle.plugins.jasypt.EncryptStringTask
+import org.cthing.gradle.plugins.jasypt.DecryptStringTask
 
 plugins {
     id("base")
-    id("com.cthing.jasypt")
+    id("org.cthing.jasypt")
 }
-
-version = ProjectVersion("0.1.0", BuildType.snapshot)
-group = "com.cthing"
 
 tasks {
     "encryptString"(EncryptStringTask::class) {

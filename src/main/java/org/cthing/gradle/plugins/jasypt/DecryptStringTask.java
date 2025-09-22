@@ -1,8 +1,8 @@
 /*
- * Copyright 2020 C Thing Software
- * All rights reserved.
+ * Copyright 2025 C Thing Software
+ * SPDX-License-Identifier: Apache-2.0
  */
-package com.cthing.gradle.plugins.jasypt;
+package org.cthing.gradle.plugins.jasypt;
 
 import org.gradle.api.GradleException;
 import org.gradle.api.tasks.TaskAction;

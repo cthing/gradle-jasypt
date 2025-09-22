@@ -1,8 +1,8 @@
 /*
- * Copyright 2020 C Thing Software
- * All rights reserved.
+ * Copyright 2025 C Thing Software
+ * SPDX-License-Identifier: Apache-2.0
  */
-package com.cthing.gradle.plugins.jasypt;
+package org.cthing.gradle.plugins.jasypt;
 
 import org.cthing.jasypt.CthingStringEncryptor;
 import org.gradle.api.DefaultTask;
@@ -10,6 +10,7 @@ import org.gradle.api.GradleException;
 import org.gradle.api.tasks.Internal;
 import org.gradle.api.tasks.options.Option;
 import org.jasypt.encryption.StringEncryptor;
+import org.jspecify.annotations.Nullable;
 
 
 /**
@@ -17,9 +18,13 @@ import org.jasypt.encryption.StringEncryptor;
  */
 public abstract class AbstractStringEncryptorTask extends DefaultTask {
 
+    @Nullable
     protected String string;
 
+    @Nullable
     private String password;
+
+    @Nullable
     private StringEncryptor encryptor;
 
     @SuppressWarnings("this-escape")
