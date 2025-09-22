@@ -1,7 +1,7 @@
 # ![C Thing Software](https://www.cthing.com/branding/CThingSoftware-57x60.png "C Thing Software") gradle-jasypt
 
 [![CI](https://github.com/cthing/gradle-jasypt/actions/workflows/ci.yml/badge.svg)](https://github.com/cthing/gradle-jasypt/actions/workflows/ci.yml)
-[![Portal](https://img.shields.io/gradle-plugin-portal/v/org.cthing.jasypt?label=Plugin%20Portal&logo=gradle)](https://plugins.gradle.org/plugin/org.cthing.jasypt)~~
+[![Portal](https://img.shields.io/gradle-plugin-portal/v/org.cthing.jasypt?label=Plugin%20Portal&logo=gradle)](https://plugins.gradle.org/plugin/org.cthing.jasypt)
 
 A Gradle plugin for encrypting and decrypting values using Jasypt.
 
