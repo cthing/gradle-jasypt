@@ -43,20 +43,21 @@ gradlePlugin {
     website = "https://github.com/cthing/gradle-jasypt"
     vcsUrl = "https://github.com/cthing/gradle-jasypt"
 
-    plugins.create("jasyptPlugin") {
+    plugins.create("jasyptPlugin", Action {
         id = "org.cthing.jasypt"
         displayName = "Encrypt and descrypt values using Jasypt"
         description = "A Gradle plugin for encrypting and decrypting values using Jasypt."
         tags = listOf("encrypt", "decrypt", "jasypt")
         implementationClass = "org.cthing.gradle.plugins.jasypt.JasyptPlugin"
-    }
+    })
 }
 
 dependencies {
     api(libs.jasypt)
 
-    implementation(libs.jspecify)
     implementation(libs.cthingJasypt)
+
+    compileOnly(libs.jspecify)
 
     testImplementation(libs.assertJ)
     testImplementation(libs.assertJGradle)
