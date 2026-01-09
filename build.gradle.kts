@@ -30,7 +30,7 @@ plugins {
     alias(libs.plugins.versions)
 }
 
-version = ProjectVersion("1.1.0", BuildType.release)
+version = ProjectVersion("1.1.1", BuildType.snapshot)
 group = "org.cthing"
 description = "Plugin for encrypting and decrypting values using Jasypt."
 

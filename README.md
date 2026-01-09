@@ -13,7 +13,7 @@ applied to a Gradle project using the `plugins` block:
 
 ```kotlin
 plugins {
-  id("org.cthing.jasypt") version "1.0.0"
+  id("org.cthing.jasypt") version "1.1.0"
 }
 ```
 
@@ -22,7 +22,7 @@ plugins {
 Applying the plugin creates the `encryptString` task. To encrypt a string run the
 following command:
 ```bash
-./gradlew encryptString --password=abcd --string=hello
+./gradlew encryptString --string=hello [--password=abcd] [--format=plain|spring]
 ```
 The encrypted string is written to the standard output:
 ```
@@ -34,12 +34,23 @@ Encrypted string: 5cWMaUf/siW1z1IQPU5sbm++lUbnV0ddQbCdjkLtRDFyiw7dSsik3mqRycfOkb
 Applying the plugin creates the `decryptString` task. To decrypt a string run the
 following command:
 ```bash
-./gradlew decryptString --password=abcd --string=5cWMaUf/siW1z1IQPU5sbm++lUbnV0ddQbCdjkLtRDFyiw7dSsik3mqRycfOkbVv
+./gradlew decryptString --string=5cWMaUf/siW1z1IQPU5sbm++lUbnV0ddQbCdjkLtRDFyiw7dSsik3mqRycfOkbVv [--password=abcd]
 ```
 The decrypted string is written to the standard output:
 ```
 Decrypted string: hello
 ```
+
+### Specifying the Password
+
+The encryption/decryption password may be specified in a number of different ways. In order of highest to lowest 
+precedence:
+* Using the `--password` command-line option
+* From the file specified by the `--password-file` command-line option 
+* Using the `CTHING_JASYPT_PASSWORD` environment variables
+* Using the `org.cthing.jasypt.password` system property
+
+If none of these mechanisms are used, a prompt is displayed to securely enter the password.
 
 ## Compatibility
 
