@@ -38,7 +38,7 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
     @Nullable
     protected String string;
 
-    private char @Nullable [] password;
+    private char[] password;
 
     @Nullable
     private Path passwordFile;
@@ -53,6 +53,7 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
     protected AbstractStringEncryptorTask(final ProviderFactory providerFactory) {
         setGroup("Encryption");
 
+        this.password = new char[0];
         this.passwordEnvironmentProvider = providerFactory.environmentVariable(PASSWORD_ENV_VAR);
         this.passwordPropertyProvider = providerFactory.systemProperty(PASSWORD_PROPERTY);
     }
@@ -75,9 +76,7 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
      * Clears the password held by the task.
      */
     public void clearPassword() {
-        if (this.password != null) {
-            Arrays.fill(this.password, '\0');
-        }
+        Arrays.fill(this.password, '\0');
     }
 
     @Option(option = "string", description = "String to encrypt or decrypt")
@@ -128,8 +127,6 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
         if (isEmpty(this.password)) {
             throw new GradleException("Password must be specified");
         }
-
-        assert this.password != null;
 
         final CthingStringEncryptor enc = new CthingStringEncryptor();
         enc.setPassword(this.password);
@@ -199,7 +196,7 @@ public abstract class AbstractStringEncryptorTask extends DefaultTask {
         return Arrays.copyOf(pw, length);
     }
 
-    private boolean isEmpty(final char @Nullable [] array) {
-        return array == null || array.length == 0;
+    private boolean isEmpty(final char[] array) {
+        return array.length == 0;
     }
 }
