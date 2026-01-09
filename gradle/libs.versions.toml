@@ -18,7 +18,7 @@ versions = { id = "com.github.ben-manes.versions", version = "0.53.0" }
 assertJ = "org.assertj:assertj-core:3.27.6"
 assertJGradle = "org.cthing:assertj-gradle:3.0.0"
 commonsIO = "commons-io:commons-io:2.20.0"
-cthingJasypt = "org.cthing:cthing-jasypt:1.0.0"
+cthingJasypt = "org.cthing:cthing-jasypt:1.1.0"
 jasypt = "org.jasypt:jasypt:1.9.3"
 jspecify = "org.jspecify:jspecify:1.0.0"
 junitApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
